@@ -16,8 +16,8 @@ namespace DotNetCoreKoans.Koans
             //With & only taking the same one else take 0,so 1 & 3 it becomes 0001.
             //When 0001 convert to int it becomes 1
             int x = 4 & 4;
-            
-            Assert.Equal(FILL_ME_IN, x);
+
+            Assert.Equal(4, x);
         }
 
         [Step(2)]
@@ -29,8 +29,8 @@ namespace DotNetCoreKoans.Koans
             //With | it will take any 1 if either one contains 1,so 1 & 3 it becomes 0011.
             //When 0011 convert to int it becomes 3
             int x = 4 | 4;
-            
-            Assert.Equal(FILL_ME_IN, x);
+
+            Assert.Equal(4, x);
         }
 
         [Step(3)]
@@ -43,7 +43,7 @@ namespace DotNetCoreKoans.Koans
             //When 0010 convert to int it becomes 2
             int x = 4 ^ 4;
 
-            Assert.Equal(FILL_ME_IN, x);
+            Assert.Equal(0, x);
         }
 
         [Step(4)]
@@ -54,7 +54,7 @@ namespace DotNetCoreKoans.Koans
             // ~1 become -2
             int x = ~4;
 
-            Assert.Equal(FILL_ME_IN, x);
+            Assert.Equal(-5, x);
         }
 
         [Step(5)]
@@ -62,7 +62,7 @@ namespace DotNetCoreKoans.Koans
         {
             int x = ~3 & 8;
 
-			Assert.Equal(FILL_ME_IN, x);
+			Assert.Equal(8, x);
         }
 
         [Step(6)]
@@ -70,7 +70,7 @@ namespace DotNetCoreKoans.Koans
         {
             int x = 4 | 4 & 8;
 
-            Assert.Equal(FILL_ME_IN, x);
+            Assert.Equal(4, x);
         }
 
         [Step(7)]
@@ -78,7 +78,7 @@ namespace DotNetCoreKoans.Koans
         {
             int x = 3 & 4 ^ 4 & ~8;
 
-            Assert.Equal(FILL_ME_IN, x);
+            Assert.Equal(4, x);
         }
 
         [Step(8)]
@@ -91,7 +91,7 @@ namespace DotNetCoreKoans.Koans
             //then it will become 8
             int x = 10 << 2;
 
-            Assert.Equal(FILL_ME_IN, x);
+            Assert.Equal(40, x);
         }
 
         [Step(9)]
@@ -103,7 +103,7 @@ namespace DotNetCoreKoans.Koans
             //it becomes 0010
             //then it will become 2
             int x = 12 >> 2;
-            Assert.Equal(FILL_ME_IN, x);
+            Assert.Equal(3, x);
         }
 
         [Step(10)]
@@ -111,7 +111,7 @@ namespace DotNetCoreKoans.Koans
         {
             int x = (5 << 2) & 8 ^ 3;
 
-            Assert.Equal(FILL_ME_IN, x);
+            Assert.Equal(3, x);
         }
 
         [Step(11)]
@@ -119,7 +119,7 @@ namespace DotNetCoreKoans.Koans
         {
             int x = (5 >> 2) & (~8) ^ 8;
 
-            Assert.Equal(FILL_ME_IN, x);
+            Assert.Equal(9, x);
         }
 
         [Step(12)]
@@ -127,20 +127,20 @@ namespace DotNetCoreKoans.Koans
         {
             int x = (8 << 2) & (~5) & 8 | 10 | (5 >> 1);
 
-            Assert.Equal(FILL_ME_IN, x);
+            Assert.Equal(10, x);
         }
 
         [Step(13)]
         public void AdditionWithoutPlusOrMinusOperator()
         {
             //Solve this problem without using + or -
-            //This is a complicated problem. If you don't 
+            //This is a complicated problem. If you don't
             //know how to solve it, try to Google it.
             int a = 15;
             int b = 4;
 
             //Here goes your implementation to set value to FILL_ME_IN
-            Assert.Equal(FILL_ME_IN, 19);
+            Assert.Equal(~-(15 << 1 ^ 11) ^ 7, 19);
         }
     }
 }

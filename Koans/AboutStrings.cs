@@ -270,7 +270,6 @@ broken line";
         public void YouCanGetASingleCharacterFromAString()
         {
             var str = "Bacon, lettuce and tomato";
-            Console.WriteLine(str[0]);
             Assert.Equal('B', str[0]);
         }
 
